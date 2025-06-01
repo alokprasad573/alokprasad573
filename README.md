@@ -47,7 +47,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/BackendDevelopment/express.svg" width="40" height="40" title="Express.js" />
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/BackendDevelopment/graphql.svg" width="40" height="40" title="GraphQL" />
 </p>
 
 <h3 align="left">Database Management:</h3>
