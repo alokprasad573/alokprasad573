@@ -48,23 +48,33 @@ From the halls of Rungta International Skills University to the global digital g
 
 ### 💻 Programming Languages
 
+<div style="display:flex; flex-direction:row;">
 <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/java.svg" alt="Java"  width="32" height="32"/>&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/javascript.svg" alt="JavaScript"  width="32" height="32"/>&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/python.svg" alt="Python"  width="32" height="32"/>
+</div>
 
 ### 💻 Frontend Development
 
+<div style="display:flex; flex-direction:row;">
 <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4?size=32" alt="Tailwind CSS"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/html5/E34F26?size=32" alt="HTML5"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/bootstrap/7952B3?size=32" alt="Bootstrap"  />&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/css.svg" alt="CSS3" width="32" height="32" />
+</div>
 
 ### 💻 Backend Development
 
+<div style="display:flex; flex-direction:row;">
 <img src="https://cdn.simpleicons.org/nodedotjs/339933?size=32" alt="Node.js"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/express/000000?size=32" alt="Express.js"  />
+</div>
 
 ### 💻 AI/ML
 
+<div style="display:flex; flex-direction:row;">
 <img src="https://cdn.simpleicons.org/tensorflow/FF6F00?size=32" alt="TensorFlow"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/pytorch/EE4C2C?size=32" alt="PyTorch"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/pandas/150458?size=32" alt="Pandas"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/opencv/5C3EE8?size=32" alt="OpenCV"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/scikitlearn/F7931E?size=32" alt="scikit-learn"  />
+</div>
 
 ### 💻 Database
 
+<div style="display:flex; flex-direction:row;">
 <img src="https://cdn.simpleicons.org/mongodb/47A248?size=32" alt="MongoDB"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/mysql/4479A1?size=32" alt="MySQL"  />
+</div>
 
 ### 💻 DevOps
 
