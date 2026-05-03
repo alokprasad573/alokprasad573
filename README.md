@@ -48,21 +48,11 @@ From the halls of Rungta International Skills University to the global digital g
 
 ### 💻 Programming Languages
 
-<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/java.svg" alt="Java"  width="32" height="32"/>
-&nbsp;&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/javascript.svg" alt="JavaScript"  width="32" height="32"/>
-&nbsp;&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/python.svg" alt="Python"  width="32" height="32"/>
+<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/java.svg" alt="Java"  width="32" height="32"/>&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/javascript.svg" alt="JavaScript"  width="32" height="32"/>&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/python.svg" alt="Python"  width="32" height="32"/>
 
 ### 💻 Frontend Development
 
-<img src="https://cdn.simpleicons.org/tailwindcss/06B6D4?size=32" alt="Tailwind CSS"  />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.simpleicons.org/html5/E34F26?size=32" alt="HTML5"  />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.simpleicons.org/bootstrap/7952B3?size=32" alt="Bootstrap"  />
-&nbsp;&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/css.svg" alt="CSS3" width="32" height="32" />
+<img src="https://cdn.simpleicons.org/tailwindcss/06B6D4?size=32" alt="Tailwind CSS"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/html5/E34F26?size=32" alt="HTML5"  />&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/bootstrap/7952B3?size=32" alt="Bootstrap"  />&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/css.svg" alt="CSS3" width="32" height="32" />
 
 ### 💻 Backend Development
 
@@ -118,13 +108,7 @@ From the halls of Rungta International Skills University to the global digital g
   </a>
 </p>
 
-<p align="center">
-  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abozanona/abozanona/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abozanona/abozanona/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/abozanona/abozanona/output/pacman-contribution-graph.svg">
-</picture>
-</p>
+
 
 
 
