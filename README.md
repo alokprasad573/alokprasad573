@@ -116,11 +116,11 @@
 
 ## <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode" width="28" style="vertical-align: middle;" /> Leetcode Stats
 
-<div align="center">
-
-![LeetCode Stats](https://readmecodegen.com/api/leetcode-stats/JeLZBPg1N9?theme=gradient)
-
-</div>
+<p align="center">
+  <a href="https://leetcode.com/u/JeLZBPg1N9/">
+    <img src="https://leetcard.jacoblin.cool/JeLZBPg1N9?theme=dark&font=Roboto&ext=heatmap" alt="LeetCode Stats" />
+  </a>
+</p>
 
 
 ## 🔗 Connect with Me
