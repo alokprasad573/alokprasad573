@@ -1,20 +1,16 @@
-<!-- <div align="center">
+<div align="center">
 
-<img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px" height="30px">
+<!-- <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px" height="30px">
 
-# Hey, I'm Alok Prasad!
+# Hey, I'm Alok Prasad! -->
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=435&lines=Data%20Scientist;AI%20Enthusiast;from%20India.)](https://git.io/typing-svg)
+<!-- [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=435&lines=Data%20Scientist;AI%20Enthusiast;from%20India.)](https://git.io/typing-svg)
 
 
 </div> -->
 
 <img src="./images/github-header-banner.png" alt="Header Image" width="100%">
 
-## 🚀 About Me
-
-I'm Alok, a Cyber-Engineer specializing in AI and Machine Learning.
-From the halls of Rungta International Skills University to the global digital grid, I work to deploy software that acts as a catalyst for human progress.
 
 ## 📚 Learning & Knowledge
 
