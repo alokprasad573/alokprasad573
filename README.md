@@ -1,101 +1,40 @@
-<p>
-    <img src="./header-image/github-header-image.png">
-</p>
+<div align="center">
 
-<h3 align="left">
-  I am a B.Tech student at Rungta College of Engineering and Technology, specializing in Computer Science and Artificial Intelligence. My passion lies in coding, problem-solving, and exploring new technologies to build impactful solutions.
-  Currently, I am learning web development using the MERN stack (MongoDB, Express.js, React.js, Node.js) and actively seeking opportunities to contribute to open-source projects. I thrive on collaboration and innovation, constantly pushing boundaries to create dynamic and scalable applications.
-</h3>
+<img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px" height="30px">
 
-<h2 align="left">Some Facts About Me</h2>
+# Hey, I'm Alok Prasad!
 
-- 🌱 I’m currently learning **Web Development**
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=435&lines=Data%20Scientist%20%26%20AI%20Engineer;Gen%20AI%2C%20RAG%20%26%20Agentic%20AI;Based%20in%20India)](https://git.io/typing-svg)
 
-- 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/alok-prasad-474962289/)
+</div>
 
-<h2 align="left">Skillset</h2>
+## 🚀 About Me
 
-<h3 align="left">Programming Languages:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/c.svg" width="40" height="40" title="C" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/java.svg" width="40" height="40" title="Java" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/javascript.svg" width="40" height="40" title="JavaScript" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/ProgrammingLanguages/python.svg" width="40" height="40" title="Python" />
-</p>
+I am Alok, a Cyber-Engineer specializing in AI and Machine Learning.
+From the halls of Rungta International Skills University to the global digital grid, my mission
+is to deploy software that acts as a catalyst for human progress.
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=alokprasad573&show_icons=true&locale=en&layout=compact&theme=dark" />
+- 🏢 Working at **Rungta College of engineering and technology** in **India**
+- 🌱 Currently learning **Gen AI, RAG & Agentic AI**
+- 💬 Ask me about **Data Science**
+- ⚡ 🏏 When I’m not coding, I’m following cricket scores.
 
-<h3 align="left">Frontend Development:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/reactjs.svg" width="40" height="40" title="ReactJS" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/bootstrap.svg" width="40" height="40" title="Bootstrap" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/html.svg" width="40" height="40" title="HTML" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/css.svg" width="40" height="40" title="CSS" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/FrontendDevelopment/tailwind.svg" width="40" height="40" title="Tailwind" />
-</p>
+## 🛠️ Tech Stack
 
-<h3 align="left">Backend Development:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/BackendDevelopment/nodejs.svg" width="40" height="40" title="Node.js" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/BackendDevelopment/express.svg" width="40" height="40" title="Express.js" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+## 📊 GitHub Stats
 
-<h3 align="left">Database Management:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Database/mongodb.svg" width="40" height="40" title="MongoDB" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Database/mysql.svg" width="40" height="40" title="MySQL" />
-</p>
+<div align="center">
 
-<h3 align="left">Softwares:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Software/figma.svg" width="40" height="40" title="Figma" />
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Software/postman.svg" width="40" height="40" title="Postman" />
-</p>
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=https://www.github.com/alokprasad573&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117)
 
-<h3 align="left">Static Site Generators:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/StaticSiteGenerators/nextjs.svg" width="40" height="40" title="Next.js" />
-</p>
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=https://www.github.com/alokprasad573&theme=github-dark-blue&hide_border=true&background=0d1117)](https://git.io/streak-stats)
 
-<h3 align="left">Others:</h3>
-<p align="left">
-    <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Other/git.svg" width="40" height="40" title="Git" />
-</p>
+</div>
 
-<br><hr><br>
+## 🔗 Connect with me
 
-<img width="100%" align="center" src="https://github-profile-trophy.vercel.app/?username=alokprasad573&theme=darkhub" />
+<div align="center">
 
-<img width="50%" align="left" src="https://github-readme-stats.vercel.app/api?username=alokprasad573&show_icons=true&locale=en&theme=dark" />
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://b-127-archive.vercel.app/) [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alokprasad573@outlook.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/alok-prasad-474962289) [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/https://www.github.com/alokprasad573)
 
-<img width="50%" align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=alokprasad573&theme=dark" />
-
-<h2 align="left">Connect with Me</h2>
-<p align="left">
-    <a href="https://www.github.com/alokprasad573">
-        <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/github.svg" width="40" height="40" title="GitHub" />
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/alok-prasad-474962289/">
-        <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/linked-in-alt.svg" width="40" height="40" title="LinkedIn" />
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.instagram.com/alokprasad573">
-        <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/instagram.svg" width="40" height="40" title="Instagram" />
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://leetcode.com/u/JeLZBPg1N9/">
-        <img src="https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/leet-code.svg" width="40" height="40" title="LeetCode" />
-    </a>
-</p>
+</div>
