@@ -13,7 +13,7 @@
 
 ## 🚀 About Me
 
-Hi, I'm Alok Prasad, a Cyber-Engineer specializing in AI and Machine Learning.
+I'm Alok, a Cyber-Engineer specializing in AI and Machine Learning.
 From the halls of Rungta International Skills University to the global digital grid, I work to deploy software that acts as a catalyst for human progress.
 
 ## 📚 Learning & Knowledge
