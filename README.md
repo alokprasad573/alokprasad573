@@ -114,8 +114,13 @@
   </a>
 </p>
 
+## <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode" width="28" style="vertical-align: middle;" /> Leetcode Stats
 
+<div align="center">
 
+![LeetCode Stats](https://readmecodegen.com/api/leetcode-stats/JeLZBPg1N9?theme=gradient)
+
+</div>
 
 
 ## 🔗 Connect with Me
