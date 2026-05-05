@@ -2,9 +2,6 @@
 
 <img src="./images/github-header-banner.png" alt="Header Image" width="100%">
 
-# Hi there! 👋 I'm Alok Prasad
-
-**Data Scientist | AI Enthusiast | Full-Stack Developer**
 
 </div>
 
