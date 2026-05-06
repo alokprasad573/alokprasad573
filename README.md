@@ -11,12 +11,12 @@
 
 I'm a B.Tech student in Cyber Engineering at Rungta International Skills University, passionate about building intelligent solutions using AI and modern web technologies. I love exploring data science, machine learning, and creating full-stack applications that solve real-world problems.
 
-- 🌱 Currently learning **Data Science & Generative AI**
-- 🎓 B.Tech in Cyber Engineering (Expected 2027)
-- 🤖 Passionate about AI/ML applications
-- 🔗 Always eager to learn new technologies
-- 🔭 I’m currently working on **Intelligent AI Attendance System**
-- 💡 Problem solver with a focus on practical implementation
+- 🌱 Currently learning **Data Science & Generative AI.**
+- 🎓 B.Tech in Cyber Engineering (Expected 2027).
+- 🤖 Passionate about AI/ML applications.
+- 🔗 Always eager to learn new technologies.
+- 🔭 I’m currently working on **Intelligent AI Attendance System.**
+- 💡 Problem solver with a focus on practical implementation.
 
 ---
 
