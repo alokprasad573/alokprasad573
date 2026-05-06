@@ -59,7 +59,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 ### 🤖 AI/ML & Data Science
 ![TensorFlow](https://cdn.simpleicons.org/tensorflow/FF6F00?size=32)
 ![PyTorch](https://cdn.simpleicons.org/pytorch/EE4C2C?size=32)
-![Scikit-learn](https://cdn.simpleicons.org/scikit-learn/F7931E?size=32)
+![Scikit-learn](https://cdn.simpleicons.org/scikitlearn/F7931E?size=32)
 ![Pandas](https://cdn.simpleicons.org/pandas/150458?size=32)
 
 ### 💾 Databases
