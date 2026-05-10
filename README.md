@@ -91,7 +91,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 </p>
 
 ---
-```
+
 ## 🧮 LeetCode Progress
 
 <p align="center">
@@ -101,7 +101,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 </p>
 
 ---
-```
+
 ## 🔗 Connect With Me
 
 <p align="center">
