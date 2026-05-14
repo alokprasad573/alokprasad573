@@ -37,6 +37,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 |---|---|---|
 | Rungta International Skills University, Bhilai | B.Tech in Cyber Engineering | 2023 - 2027 |
 | Gaya College, Gaya | Intermediate Science (I.Sc) | 2020 - 2022 |
+| Hansraj Public School, Gaya | Matriculation (10th Board) | 2020
 
 ---
 
