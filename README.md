@@ -55,18 +55,24 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 ![Node.js](https://cdn.simpleicons.org/nodedotjs/339933?size=32)
 ![Express.js](https://cdn.simpleicons.org/express/000000?size=32)
 ![Flask](https://cdn.simpleicons.org/flask/000000?size=32)
+![FastApi](https://cdn.simpleicons.org/fastapi/009688?size=32)
+![Redis](https://cdn.simpleicons.org/redis/FF4438?size=32)
 
 ### 🤖 AI/ML & Data Science
+![Anaconda](https://cdn.simpleicons.org/anaconda/44A833?size=32)
+![Jupyter Notebook](https://cdn.simpleicons.org/jupyter/F37626?size=32)
 ![TensorFlow](https://cdn.simpleicons.org/tensorflow/FF6F00?size=32)
 ![PyTorch](https://cdn.simpleicons.org/pytorch/EE4C2C?size=32)
 ![Scikit-learn](https://cdn.simpleicons.org/scikitlearn/F7931E?size=32)
 ![Pandas](https://cdn.simpleicons.org/pandas/150458?size=32)
+![LangChain](https://cdn.simpleicons.org/langchaincorporate/7FC8FF?size=32)
 
 ### 💾 Databases
 ![MongoDB](https://cdn.simpleicons.org/mongodb/47A248?size=32)
 ![MySQL](https://cdn.simpleicons.org/mysql/4479A1?size=32)
+![SupaBase](https://cdn.simpleicons.org/supabase/3FCF8E?size=32)
 
-### 🐳 DevOps & Tools
+### ☁️ Cloud & 🛠️ DevOps Tools
 ![Docker](https://cdn.simpleicons.org/docker/2496ED?size=32)
 ![Kubernetes](https://cdn.simpleicons.org/kubernetes/326CE5?size=32)
 ![Git](https://cdn.simpleicons.org/git/F05032?size=32)
