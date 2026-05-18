@@ -72,7 +72,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 ![MySQL](https://cdn.simpleicons.org/mysql/4479A1?size=32)
 ![SupaBase](https://cdn.simpleicons.org/supabase/3FCF8E?size=32)
 
-### ☁️ Cloud & 🛠️ DevOps Tools
+### 🛠️ DevOps Tools
 ![Docker](https://cdn.simpleicons.org/docker/2496ED?size=32)
 ![Kubernetes](https://cdn.simpleicons.org/kubernetes/326CE5?size=32)
 ![Git](https://cdn.simpleicons.org/git/F05032?size=32)
