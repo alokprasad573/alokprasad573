@@ -15,7 +15,7 @@ I'm a B.Tech student in Cyber Engineering at Rungta International Skills Univers
 - 🎓 B.Tech in Cyber Engineering (Expected 2027).
 - 🤖 Passionate about AI/ML applications.
 - 🔗 Always eager to learn new technologies.
-- 🔭 I’m currently working at **XYlofy AI**
+- 🔭 I’m currently working at **Employee Attrition Prediction.**
 - 💡 Problem solver with a focus on practical implementation.
 
 ---
