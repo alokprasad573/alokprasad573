@@ -9,7 +9,8 @@
 
 ## 📚 About Me
 
-I'm a B.Tech student in Cyber Engineering at Rungta International Skills University, passionate about building intelligent solutions using AI and modern web technologies. I love exploring data science, machine learning, and creating full-stack applications that solve real-world problems.
+Hello, I’m Alok Prasad.
+An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Machine Learning. From the halls of Chhattisgarh Swami Vivekanand Technical University to the global digital grid, my mission is to craft intelligent systems that automate, innovate, and serve as catalysts for human progress.
 
 - 🌱 Currently learning **Data Science & Generative AI.**
 - 🎓 B.Tech in Cyber Engineering (Expected 2027).
