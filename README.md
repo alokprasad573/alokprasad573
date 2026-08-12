@@ -88,7 +88,7 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=alokprasad573&theme=github_dark&hide_border=true&cache_seconds=86400" alt="GitHub Streak" width="48%" />
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=alokprasad573&theme=dark&hide_border=true" alt="GitHub Streak" /></a>
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=alokprasad573&langs_count=8&layout=compact&theme=github_dark&border_radius=10" alt="Top Languages" width="48%" />
 </p>
 
