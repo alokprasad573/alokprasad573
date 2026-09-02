@@ -12,7 +12,7 @@
 Hello, I’m Alok Prasad.
 An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Machine Learning. From the halls of Chhattisgarh Swami Vivekanand Technical University to the global digital grid, my mission is to craft intelligent systems that automate, innovate, and serve as catalysts for human progress.
 
-- 🌱 Currently learning ****
+- 🌱 Currently learning **Software Development with AI Integration.**
 - 🎓 B.Tech in Cyber Engineering (Expected 2027).
 - 🤖 Passionate about AI/ML applications.
 - 🔗 Always eager to learn new technologies.
@@ -99,17 +99,7 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 </p>
 
 ---
-<!-- ------
-## 🧮 LeetCode Progress
 
-<p align="center">
-  <a href="https://leetcode.com/u/JeLZBPg1N9/">
-    <img src="https://leetcard.jacoblin.cool/JeLZBPg1N9?theme=dark&font=Roboto&ext=heatmap" alt="LeetCode Stats" />
-  </a>
-</p>
-
----
---- -->
 ## 🔗 Connect With Me
 
 <p align="center">
