@@ -103,7 +103,7 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 ## 🔗 Connect With Me
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/alok-prasad-474962289/" target="_blank">
+  <a href="https://www.linkedin.com/in/alokprasad573/" target="_blank">
     <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/SVG/Color/LinkedIN.svg" alt="LinkedIn" width="40" />
   </a>&nbsp;&nbsp;&nbsp;
   <a href="mailto:alokprasad573@gmail.com">
