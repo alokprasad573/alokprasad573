@@ -12,11 +12,11 @@
 Hello, I’m Alok Prasad.
 An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Machine Learning. From the halls of Chhattisgarh Swami Vivekanand Technical University to the global digital grid, my mission is to craft intelligent systems that automate, innovate, and serve as catalysts for human progress.
 
-- 🌱 Currently learning **Data Science & Generative AI.**
+- 🌱 Currently learning ****
 - 🎓 B.Tech in Cyber Engineering (Expected 2027).
 - 🤖 Passionate about AI/ML applications.
 - 🔗 Always eager to learn new technologies.
-- 🔭 I’m currently working at **Employee Attrition Prediction.**
+- 🔭 I’m currently working on **PRAXIS - Multi-Agent Orchestration Platform.**
 - 💡 Problem solver with a focus on practical implementation.
 
 ---
@@ -87,17 +87,19 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=alokprasad573&cache_seconds=7200&layout=compact&theme=github_dark&border_radius=10" alt="GitHub Stats" />
 </p>
 
+<!-- Github Streak -->
 <p align="center">
   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=alokprasad573&theme=dark&hide_border=true" alt="GitHub Streak" /></a>
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=alokprasad573&langs_count=8&layout=compact&theme=github_dark&border_radius=10" alt="Top Languages" width="48%" />
 </p>
 
+<!-- Activity Graph -->
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=alokprasad573&theme=github_dark&radius=10" alt="Activity Graph" width="100%" />
+  <img src="https://raw.githubusercontent.com/alokprasad573/alokprasad573/output/activity-graph.svg" alt="Activity Graph" width="100%" />
 </p>
 
 ---
-<!--------
+<!-- ------
 ## 🧮 LeetCode Progress
 
 <p align="center">
@@ -107,7 +109,7 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 </p>
 
 ---
------>
+--- -->
 ## 🔗 Connect With Me
 
 <p align="center">
