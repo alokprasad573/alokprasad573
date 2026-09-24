@@ -21,15 +21,6 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 
 ---
 
-## 🚀 Featured Projects
-
-| Project | Description |
-| :---: | :--- |
-| <img src="./images/stackscore.png" alt="StackScore" width="300"/> | **StackScore : AI Resume Analyzer**<br/>StackScore is an AI-powered resume analyzer that helps job seekers optimize their resumes for specific companies and roles using ATS-friendly feedback, built with React, TypeScript, and Puter.js.<br/><br/>**Technologies:** React Router v7, TypeScript, Puter.js, Tailwind CSS, Vercel<br/>**Link:** [GitHub Repo](https://github.com/alokprasad573/StackScore.git) |
-| <img src="./images/solarguard.png" alt="SolarGuard" width="300"/> | **SolarGuard: Solar-Panel-Anomaly-Detection-using-Deep-Learning**<br/>An automated deep learning solution designed to identify physical and electrical anomalies in solar panels. Using an EfficientNetV2B0 backbone, this system categorizes module health into 6 distinct classes, enabling predictive maintenance for sustainable energy infrastructure.<br/><br/>**Technologies:** Python, Tensorflow, HTML5, TailwindCSS, Flask<br/>**Link:** [GitHub Repo](https://github.com/alokprasad573/Solar-Panel-Anomaly-Detection-using-Deep-Learning.git) |
-| <img src="./images/PolicyOracle.png" alt="PolicyOracle" width="300"/> | **PolicyOracle : GenAI-based-Health-Insurance-Auditor**<br/>PolicyOracle is an advanced RAG (Retrieval-Augmented Generation) framework designed to automate the lifecycle of insurance claim processing—from raw data ingestion to final audit reporting.<br/><br/>**Technologies:** Python, Langchain, Flask, HTML5, TailwindCSS, JavaScript, Pinecone<br/>**Link:** [GitHub Repo](https://github.com/alokprasad573/GenAI-based-Health-Insurance-Auditor.git) |
-| <img src="./images/smartroll.png" alt="Text Summarizer" width="300"/> | **SmartRoll : Intelligent AI Attendance with Face Recognition**<br/>SmartRoll is a modern, AI-powered attendance management system that leverages Face Recognition to provide a seamless and secure attendance-tracking experience. Built with Streamlit, Supabase and KNN classifier, it offers dedicated portals for both teachers and students.<br/><br/>**Technologies:** Python, Streamlit, Scikit-Learn(KNN), Supabase<br/>**Link:** [GitHub Repo](https://github.com/alokprasad573/Intelligent-AI-Attendance-with-Face-Recognition) |
-
 ## 🎓 Education
 
 | Institution | Degree | Duration |
@@ -45,6 +36,7 @@ An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Ma
 ### 💻 Programming Languages
 ![JavaScript](https://cdn.simpleicons.org/javascript/F7DF1E?size=32)
 ![Python](https://cdn.simpleicons.org/python/3776AB?size=32)
+![C++](https://cdn.simpleicons.org/cplusplus/00599C?size=32)
 
 ### 🎨 Frontend Development
 ![Tailwind CSS](https://cdn.simpleicons.org/tailwindcss/06B6D4?size=32)
