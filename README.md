@@ -12,7 +12,7 @@
 Hello, I’m Alok Prasad.
 An undergraduate Cyber‑Engineer specializing in Artificial Intelligence and Machine Learning. From the halls of Chhattisgarh Swami Vivekanand Technical University to the global digital grid, my mission is to craft intelligent systems that automate, innovate, and serve as catalysts for human progress.
 
-- 🌱 Currently learning **Software Development with AI Integration.**
+- 🌱 Currently learning **Software Development with AI & AWS Integration.**
 - 🎓 B.Tech in Cyber Engineering (Expected 2027).
 - 🤖 Passionate about AI/ML applications.
 - 🔗 Always eager to learn new technologies.
