@@ -1,16 +1,8 @@
 <!-- Alok Prasad — GitHub profile README -->
 <div align="center">
 
-<img src="./images/github-header-banner.png" alt="Alok Prasad — GitHub profile banner" width="100%" />
+<img src="" alt="Header Image" width="100%">
 
-# ALOK PRASAD
-### Software Engineer · Cyber Engineering · AI/ML
-
-Building useful software at the intersection of **web engineering, applied AI, and systems thinking**.
-
-<a href="https://github.com/alokprasad573?tab=repositories"><img src="https://img.shields.io/badge/Explore_Repositories-0b1220?style=for-the-badge&logo=github&logoColor=white" alt="Explore repositories" /></a>
-<a href="https://www.linkedin.com/in/alokprasad573/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="mailto:alokprasad573@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-bc3348?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 
 </div>
 
@@ -22,151 +14,114 @@ I’m **Alok Prasad**, a B.Tech Cyber Engineering student at Rungta Internationa
 
 My work spans full-stack product development, browser-based machine learning, applied computer vision, data-driven systems, and backend architecture. I enjoy taking a problem from system design through implementation, testing, and a usable interface.
 
-- **Currently exploring:** Software development, applied AI, and AWS integration.
-- **Interested in:** Full-stack engineering, AI/ML, computer vision, and secure systems.
-- **Approach:** Build for real use cases; make engineering decisions explicit; document the system.
-
-## 02 / Selected Work
-
-The portfolio below is arranged as a featured build on the left and a compact project index on the right. Every card links to its source repository. Live-demo links are included only when a verified deployment URL is available.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### ✦ Featured / Haziri.AI
-
-<a href="https://github.com/alokprasad573/Haziri.AI"><img src="https://opengraph.githubassets.com/1/alokprasad573/Haziri.AI" alt="Haziri.AI repository preview" width="100%" /></a>
-
-**AI-Powered Attendance & Identity Platform**
-
-A privacy-first classroom attendance system using in-browser face detection, facial landmark alignment, and SFace 128D embeddings. Built around Next.js, TypeScript, ONNX Runtime Web, MediaPipe, and Supabase Auth with PostgreSQL Row Level Security.
-
-**Engineering focus**
-- Browser-side biometric processing
-- Human-in-the-loop attendance review
-- Supabase authentication and row-level access control
-
-**Stack**
-`Next.js` `TypeScript` `MediaPipe` `ONNX Runtime Web` `Supabase`
-
-[View source ↗](https://github.com/alokprasad573/Haziri.AI) · **Live demo:** Not published
-
-</td>
-<td width="50%" valign="top">
-
-### Project Index / 07 Builds
-
-#### 02 · CivicTrack
-**Smart Civic Complaint Management**
-
-A role-based civic issue platform connecting citizens, administrators, and field officers. Includes complaint workflows, a spatial explorer, real-time updates, shared Zod contracts, and an Express + Socket.IO API.
-
-`Next.js` `TypeScript` `Express` `MongoDB` `Socket.IO` `Docker`
-
-[Source ↗](https://github.com/alokprasad573/CivicTrack) · Demo not published
+- 🌱 Currently learning **Software Development with AI & AWS Integration.**
+- 🎓 B.Tech in Computer Science Engineering (Expected 2027).
+- 🤖 Passionate about Web + AI applications.
+- 🔗 Always eager to learn new technologies.
+- 🔭 I’m currently **looking for opputunity.**
+- 💡 Problem solver with a focus on practical implementation.
 
 ---
 
-#### 03 · GymGenie
-**AI Exercise Tutor**
+## 🎓 Education
 
-A browser-first fitness tutor that tracks poses, counts repetitions deterministically, identifies form breakdowns, and provides AI-assisted coaching.
-
-`Next.js` `React` `TypeScript` `MediaPipe` `MongoDB` `Groq`
-
-[Source ↗](https://github.com/alokprasad573/GymGenie) · Demo not published
-
----
-
-#### 04 · PrepInt
-**AI Interview Preparation Platform**
-
-A full-stack interview preparation tool that generates role-specific questions, explains concepts, and organizes preparation sessions using Gemini AI.
-
-`React` `Vite` `Express` `MongoDB` `Gemini` `AWS S3`
-
-[Source ↗](https://github.com/alokprasad573/PrepInt) · Demo not published
-
----
-
-#### 05 · PulseWatch
-**API Monitoring & Incident Management**
-
-A distributed uptime monitoring and incident response system designed around resilient health checks, latency tracking, queue-backed workers, and SSRF/DNS-rebinding defenses.
-
-`TypeScript` `Next.js` `Express` `PostgreSQL` `Prisma` `Redis` `BullMQ` `Docker`
-
-[Source ↗](https://github.com/alokprasad573/PulseWatch) · Demo not published
-
----
-
-#### 06 · SENTRIX
-**DDoS Detection & Defense Simulator**
-
-A cybersecurity platform that analyzes network telemetry with machine-learning and adaptive velocity signals, then stages safe firewall mitigations in a controlled simulation environment.
-
-`FastAPI` `Next.js` `Machine Learning` `Docker`
-
-[Source ↗](https://github.com/alokprasad573/SENTRIX) · Demo not published
-
----
-
-#### 07 · SolarGuard
-**AI Solar-Panel Anomaly Detection**
-
-A client-side deep-learning application that classifies six solar-panel conditions using a fine-tuned EfficientNetV2B0 model deployed with TensorFlow.js. The repository reports 82.76% held-out test accuracy.
-
-`Next.js` `TensorFlow.js` `EfficientNetV2B0` `Docker`
-
-[Source ↗](https://github.com/alokprasad573/SolarGurad) · Demo not published
-
----
-
-#### 08 · TalentPulse
-**Employee Attrition Prediction**
-
-An end-to-end machine-learning and browser-based AI project for estimating employee turnover risk, explaining key drivers, and surfacing retention interventions.
-
-`Python` `Scikit-learn` `XGBoost` `TensorFlow.js` `React` `Vite`
-
-[Source ↗](https://github.com/alokprasad573/TalentPulse) · Demo not published
-
-</td>
-</tr>
-</table>
-
-## 03 / Engineering Toolkit
-
-| Area | Technologies |
-|---|---|
-| **Languages** | JavaScript, Python, C++ |
-| **Frontend** | React, Next.js, Tailwind CSS, HTML5 |
-| **Backend** | Node.js, Express, Flask, FastAPI |
-| **AI / ML** | MediaPipe, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, LangChain |
-| **Data** | MongoDB, PostgreSQL, MySQL, Supabase, Redis |
-| **Cloud & DevOps** | AWS, Docker, Git, GitHub Actions, Postman |
-
-## 04 / Education
-
-| Institution | Qualification | Period |
+| Institution | Degree | Duration |
 |---|---|---|
-| Rungta International Skills University, Bhilai | B.Tech — Cyber Engineering | 2023–2027 |
-| Gaya College, Gaya | Intermediate Science (I.Sc) | 2020–2022 |
-| Hansraj Public School, Gaya | Matriculation | 2020 |
+| Rungta International Skills University, Bhilai | B.Tech in Cyber Engineering | 2023 - 2027 |
+| Gaya College, Gaya | Intermediate Science (I.Sc) | 2020 - 2022 |
+| Hansraj Public School, Gaya | Matriculation (10th Board) | 2020
 
-## 05 / GitHub Activity
+---
 
-<div align="center">
+## 🛠️ Technical Skills
 
-<img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api?username=alokprasad573&show_icons=true&hide_border=true&title_color=58a6ff&icon_color=ff5364&text_color=c9d1d9&bg_color=0d1117" alt="GitHub statistics" />
-<img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=alokprasad573&layout=compact&hide_border=true&title_color=58a6ff&text_color=c9d1d9&bg_color=0d1117" alt="Most used languages" />
+### 💻 Programming Languages
+![JavaScript](https://cdn.simpleicons.org/javascript/F7DF1E?size=32)
+![Python](https://cdn.simpleicons.org/python/3776AB?size=32)
+![C++](https://cdn.simpleicons.org/cplusplus/00599C?size=32)
 
-<img src="https://streak-stats.demolab.com?user=alokprasad573&hide_border=true&background=0D1117&ring=58A6FF&fire=FF5364&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E" alt="GitHub contribution streak" width="80%" />
+### 🎨 Frontend Development
+![Tailwind CSS](https://cdn.simpleicons.org/tailwindcss/06B6D4?size=32)
+![HTML5](https://cdn.simpleicons.org/html5/E34F26?size=32)
+![React](https://cdn.simpleicons.org/react/61DAFB?size=32)
+![Next.js](https://cdn.simpleicons.org/nextdotjs/000000?size=32)
 
-</div>
+### 🖥️ Backend Development
+![Node.js](https://cdn.simpleicons.org/nodedotjs/339933?size=32)
+![Express.js](https://cdn.simpleicons.org/express/000000?size=32)
+![Flask](https://cdn.simpleicons.org/flask/000000?size=32)
+![FastApi](https://cdn.simpleicons.org/fastapi/009688?size=32)
+![Redis](https://cdn.simpleicons.org/redis/FF4438?size=32)
 
-## 06 / Connect
+### 🤖 AI/ML & Data Science
+![Anaconda](https://cdn.simpleicons.org/anaconda/44A833?size=32)
+![Jupyter Notebook](https://cdn.simpleicons.org/jupyter/F37626?size=32)
+![TensorFlow](https://cdn.simpleicons.org/tensorflow/FF6F00?size=32)
+![PyTorch](https://cdn.simpleicons.org/pytorch/EE4C2C?size=32)
+![Mediapipe](https://cdn.simpleicons.org/mediapipe/0097A7?size=32)
+![Scikit-learn](https://cdn.simpleicons.org/scikitlearn/F7931E?size=32)
+![Pandas](https://cdn.simpleicons.org/pandas/150458?size=32)
+![Numpy](https://cdn.simpleicons.org/numpy/013243?size=32)
+![LangChain](https://cdn.simpleicons.org/langchaincorporate/7FC8FF?size=32)
+
+### 💾 Databases
+![MongoDB](https://cdn.simpleicons.org/mongodb/47A248?size=32)
+![MySQL](https://cdn.simpleicons.org/mysql/4479A1?size=32)
+![SupaBase](https://cdn.simpleicons.org/supabase/3FCF8E?size=32)
+
+### 🛠️ DevOps Tools & Cloud
+![Docker](https://cdn.simpleicons.org/docker/2496ED?size=32)
+![Git](https://cdn.simpleicons.org/git/F05032?size=32)
+![Postman](https://cdn.simpleicons.org/postman/FF6C37?size=32)
+![!Github](https://cdn.simpleicons.org/github/181717?size=32)
+![AWS]
+
+---
+
+## 📊 GitHub Statistics
+
+<p align="center">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=alokprasad573&cache_seconds=7200&layout=compact&theme=github_dark&border_radius=10" alt="GitHub Stats" />
+</p>
+
+<!-- Github Streak -->
+<p align="center">
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=alokprasad573&theme=dark&hide_border=true" alt="GitHub Streak" /></a>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=alokprasad573&langs_count=8&layout=compact&theme=github_dark&border_radius=10" alt="Top Languages" width="48%" />
+</p>
+
+<!-- Activity Graph -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alokprasad573/alokprasad573/output/activity-graph.svg" alt="Activity Graph" width="100%" />
+</p>
+
+---
+
+## 🔗 Connect With Me
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/alokprasad573/" target="_blank">
+    <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/SVG/Color/LinkedIN.svg" alt="LinkedIn" width="40" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="mailto:alokprasad573@gmail.com">
+    <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/SVG/Color/Gmail.svg" alt="Gmail" width="40" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://b-127-archive.vercel.app/" target="_blank">
+    <img src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/SVG/Color/WWW.svg" alt="Portfolio" width="40" />
+  </a>
+</p>
+
+---
+
+## 💭 Favorite Quote
+
+> 🎯 *"Code is like humor. When you have to explain it, it's bad."* – Cory House
+
+---
+
+<p align="center">
+  <i>Thank you for visiting my profile! Feel free to explore my projects and connect with me.</i> 😊
+</p>
 
 <div align="center">
 
