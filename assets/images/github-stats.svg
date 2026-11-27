@@ -231,11 +231,11 @@
         <rect x="58" y="236" width="92" height="52" rx="9" fill="url(#gstats-glass-alt)" stroke="#25344D" stroke-width="1"/>
         <rect x="68" y="236" width="24" height="2" rx="1" fill="#F5F7FF"/>
         <text x="68" y="253" class="t-mono c-dim" font-size="8.5" letter-spacing="0.4">REPOS</text>
-        <text x="68" y="278" class="t-display" font-size="20" font-weight="700" fill="#F5F7FF">69</text>
+        <text x="68" y="278" class="t-display" font-size="20" font-weight="700" fill="#F5F7FF">70</text>
         <rect x="158" y="236" width="92" height="52" rx="9" fill="url(#gstats-glass-alt)" stroke="#25344D" stroke-width="1"/>
         <rect x="168" y="236" width="24" height="2" rx="1" fill="#5EA0FF"/>
         <text x="168" y="253" class="t-mono c-dim" font-size="8.5" letter-spacing="0.4">ORIGINAL</text>
-        <text x="168" y="278" class="t-display" font-size="20" font-weight="700" fill="#5EA0FF">67</text>
+        <text x="168" y="278" class="t-display" font-size="20" font-weight="700" fill="#5EA0FF">68</text>
         <rect x="258" y="236" width="92" height="52" rx="9" fill="url(#gstats-glass-alt)" stroke="#25344D" stroke-width="1"/>
         <rect x="268" y="236" width="24" height="2" rx="1" fill="#22C55E"/>
         <text x="268" y="253" class="t-mono c-dim" font-size="8.5" letter-spacing="0.4">STARS</text>
@@ -272,7 +272,7 @@
   <line x1="584" y1="74.8" x2="700" y2="74.8" stroke="url(#gstats-spec-top)" stroke-width="0.9"/>
   <rect x="588" y="74" width="32" height="2.5" rx="1.25" fill="#5EA0FF"/>
   <text x="588" y="97" class="t-mono c-dim" font-size="9.5" letter-spacing="0.6">1Y COMMITS</text>
-  <text x="588" y="128" class="t-display" font-size="24" font-weight="700" fill="#5EA0FF">500</text>
+  <text x="588" y="128" class="t-display" font-size="24" font-weight="700" fill="#5EA0FF">501</text>
   <rect x="720" y="74" width="136" height="70" rx="10" fill="url(#gstats-glass-alt)" stroke="#25344D" stroke-width="1.1"/>
   <line x1="730" y1="74.8" x2="846" y2="74.8" stroke="url(#gstats-spec-top)" stroke-width="0.9"/>
   <rect x="734" y="74" width="32" height="2.5" rx="1.25" fill="#22C55E"/>
@@ -329,5 +329,5 @@
   <rect x="806" y="280" width="346" height="30" rx="8" fill="url(#gstats-glass-alt)" stroke="#25344D" stroke-width="1"/>
   <line x1="818" y1="280.8" x2="1140" y2="280.8" stroke="url(#gstats-spec-top)" stroke-width="0.8"/>
   <text x="820" y="299" class="t-mono c-dim" font-size="10">CODED ARCHIVE COVERAGE</text>
-  <text x="1140" y="299" text-anchor="end" class="t-mono" font-size="11" font-weight="600" fill="#5EA0FF">64 / 69 REPOS</text>
+  <text x="1140" y="299" text-anchor="end" class="t-mono" font-size="11" font-weight="600" fill="#5EA0FF">64 / 70 REPOS</text>
 </svg>
