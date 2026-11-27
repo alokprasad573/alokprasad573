@@ -64,7 +64,7 @@ Currently deepening production skills in **AWS infrastructure, distributed queue
 | Project Title | Source Code | Link |
 |---|---|---|
 | **Haziri.AI** | [alokprasad573/Haziri.AI](https://github.com/alokprasad573/Haziri.AI) | [haziriai.vercel.app](https://haziriai.vercel.app/) |
-| **PrepInt** | [alokprasad573/PrepInt](https://github.com/alokprasad573/PrepInt) | [prepint-vert.vercel.app](https://prepint-vert.vercel.app) |
+| **PrepInt** | [alokprasad573/PrepInt](https://github.com/alokprasad573/PrepInt) | [https://prepint-two.vercel.app/](https://prepint-two.vercel.app/) |
 | **CivicTrack** | [alokprasad573/CivicTrack](https://github.com/alokprasad573/CivicTrack) | [civic-track-beta-three.vercel.app](https://civic-track-beta-three.vercel.app) |
 | **GymGenie** | [alokprasad573/GymGenie](https://github.com/alokprasad573/GymGenie) | [gym-genie-omega.vercel.app](https://gym-genie-omega.vercel.app) |
 | **SENTRIX** | [alokprasad573/SENTRIX](https://github.com/alokprasad573/SENTRIX) | [sentrix-bay.vercel.app](https://sentrix-bay.vercel.app) |
