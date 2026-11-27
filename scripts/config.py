@@ -235,7 +235,7 @@ GITHUB_STATS = {
 # ------------------------------------------------------------------------------
 CONNECT = {
     "aria_label": "Connect with Alok Prasad - Collaboration & Engineering Inquiries",
-    "character_badge": "CONNECT // ALOK",
+    "character_badge": "CONNECT WITH ME ALOK",
     "status_badge": "OPEN TO SWE & AI/ML ROLES",
     "location_text": "BHILAI, INDIA · B.TECH 2023–2027",
     "headline": "Let's Build Practical Software Systems",

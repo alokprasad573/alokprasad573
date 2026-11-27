@@ -24,6 +24,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import config as cfg  # noqa: E402
+from github_live import fetch_live_github_stats  # noqa: E402
 
 
 # ==============================================================================
@@ -677,26 +678,63 @@ def build_technology(fonts_css: str) -> str:
 
 
 # ==============================================================================
-# 4. GITHUB-STATS.SVG (1200x360)
+# 4. GITHUB-STATS.SVG (1200x372) — Hanging Lanyard Pendulum ID + Telemetry HUD
 # ==============================================================================
-def build_github_stats(fonts_css: str, use_raw: bool = False) -> str:
+def build_github_stats(
+    fonts_css: str,
+    use_raw: bool = False,
+    stats_override: dict | None = None,
+) -> str:
     t = cfg.THEME
-    gcfg = cfg.GITHUB_STATS
+    gcfg = stats_override or cfg.GITHUB_STATS
     prof = gcfg["profile"]
     photo_uri = resolve_image_uri(cfg.ASSETS["badge_photo"], cfg.ASSETS["badge_photo_thumb"], use_raw=use_raw)
 
-    extra_css = """      @keyframes gs-grow { 0% { transform: scaleX(0.12); } 100% { transform: scaleX(1); } }
-      @keyframes gs-glare { 0% { transform: translateX(-180px); } 54%, 100% { transform: translateX(260px); } }
-      .gs-bar { transform-origin: 410px 190px; animation: gs-grow 1s var(--ease-cinematic) 1 both; }
-      .gs-glare { animation: gs-glare 5.5s ease-in-out infinite; }
+    extra_css = """      @keyframes gs-drop {
+        0% { transform: translateY(-24px); opacity: 0.35; }
+        100% { transform: translateY(0px); opacity: 1; }
+      }
+      @keyframes gs-settle {
+        0% { transform: rotate(4.8deg); }
+        22% { transform: rotate(-3.6deg); }
+        44% { transform: rotate(2.5deg); }
+        66% { transform: rotate(-1.7deg); }
+        84% { transform: rotate(1.2deg); }
+        100% { transform: rotate(0deg); }
+      }
+      @keyframes gs-pendulum {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(1.8deg); }
+        75% { transform: rotate(-1.8deg); }
+        100% { transform: rotate(0deg); }
+      }
+      @keyframes gs-grow { 0% { transform: scaleX(0.12); } 100% { transform: scaleX(1); } }
+      @keyframes gs-glare { 0% { transform: translateX(-380px); } 56%, 100% { transform: translateX(460px); } }
+      .gs-drop { animation: gs-drop 0.95s var(--ease-cinematic) 1 both; }
+      .gs-settle { transform-origin: 204px 10px; animation: gs-settle 3.2s ease-out 1 both; }
+      .gs-swing { transform-origin: 204px 10px; animation: gs-pendulum 5.2s ease-in-out 3.2s infinite both; }
+      .gs-bar { transform-origin: 428px 190px; animation: gs-grow 1s var(--ease-cinematic) 1 both; }
+      .gs-glare { animation: gs-glare 5.2s ease-in-out infinite; }
       @media (prefers-reduced-motion: reduce) {
+        .gs-drop, .gs-settle, .gs-swing { transform: none !important; opacity: 1 !important; }
         .gs-glare { display: none; }
       }"""
 
+    # Procedural crisp vector barcode across bottom of hanging ID badge
+    bars_w = [3, 1, 2, 4, 1, 2, 1, 3, 2, 1, 4, 2, 1, 3, 1, 2, 2, 4, 1, 2, 3, 1, 2, 1, 3]
+    bx = 58
+    barcode_rects = []
+    for bw in bars_w:
+        barcode_rects.append(
+            f'<rect x="{bx}" y="317" width="{bw}" height="15" rx="0.6" fill="#9BA9C4" fill-opacity="0.78"/>'
+        )
+        bx += bw + 3
+
+    # Compute stacked proportional segments summing cleanly to 724px
     langs = gcfg["languages"][:5]
     total_coded = max(1, sum(lang["count"] for lang in langs))
-    bar_total_w = 744
-    seg_x = 410
+    bar_total_w = 724
+    seg_x = 428
     stacked_rects = []
     used_w = 0
     for idx, lang in enumerate(langs):
@@ -705,128 +743,167 @@ def build_github_stats(fonts_css: str, use_raw: bool = False) -> str:
         else:
             seg_w = round(bar_total_w * (lang["count"] / total_coded))
             used_w += seg_w
-        stacked_rects.append(f'<rect x="{seg_x}" y="182" width="{seg_w}" height="14" fill="{esc(lang["color"])}"/>')
+        stacked_rects.append(f'<rect x="{seg_x}" y="184" width="{seg_w}" height="14" fill="{esc(lang["color"])}"/>')
         seg_x += seg_w
 
+    # 2-column individual language breakdown rows inside 724px right content width
     lang_cards = []
     for idx, lang in enumerate(langs):
         col_idx = 0 if idx < 3 else 1
         row_idx = idx if idx < 3 else idx - 3
-        lx = 410 if col_idx == 0 else 798
-        ly = 216 + row_idx * 33
+        lx = 428 if col_idx == 0 else 806
+        ly = 218 + row_idx * 34
         pct = f"{(lang['count'] / total_coded) * 100:.1f}%"
-        fill_w = max(8, min(110, round(130 * (lang["count"] / total_coded))))
+        fill_w = max(8, min(102, round(122 * (lang["count"] / total_coded))))
         lang_cards.append(
             f'  <circle cx="{lx + 6}" cy="{ly + 8}" r="7" fill="{esc(lang["color"])}" fill-opacity="0.16"/>\n'
             f'  <circle cx="{lx + 6}" cy="{ly + 8}" r="4.2" fill="{esc(lang["color"])}"/>\n'
-            f'  <text x="{lx + 19}" y="{ly + 12}" class="t-body" font-size="12.5" font-weight="600" fill="{t["text"]}">{esc(lang["name"])}</text>\n'
-            f'  <rect x="{lx + 178}" y="{ly + 4.5}" width="110" height="7" rx="3.5" fill="{t["bg"]}" stroke="{t["border"]}" stroke-width="0.8"/>\n'
-            f'  <rect x="{lx + 178}" y="{ly + 4.5}" width="{fill_w}" height="7" rx="3.5" fill="{esc(lang["color"])}"/>\n'
-            f'  <text x="{lx + 356}" y="{ly + 12}" text-anchor="end" class="t-mono c-muted" font-size="11">{lang["count"]} ({pct})</text>'
+            f'  <text x="{lx + 19}" y="{ly + 12}" class="t-body" font-size="12" font-weight="600" fill="{t["text"]}">{esc(lang["name"])}</text>\n'
+            f'  <rect x="{lx + 168}" y="{ly + 4.5}" width="102" height="7" rx="3.5" fill="{t["bg"]}" stroke="{t["border"]}" stroke-width="0.8"/>\n'
+            f'  <rect x="{lx + 168}" y="{ly + 4.5}" width="{fill_w}" height="7" rx="3.5" fill="{esc(lang["color"])}"/>\n'
+            f'  <text x="{lx + 346}" y="{ly + 12}" text-anchor="end" class="t-mono c-muted" font-size="11">{lang["count"]} ({pct})</text>'
         )
 
     lang_cards.append(
-        f'  <rect x="798" y="276" width="356" height="30" rx="8" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1"/>\n'
-        f'  <line x1="810" y1="276.8" x2="1142" y2="276.8" stroke="url(#gstats-spec-top)" stroke-width="0.8"/>\n'
-        f'  <text x="812" y="295" class="t-mono c-dim" font-size="10.5">{esc(gcfg["coverage_label"])}</text>\n'
-        f'  <text x="1142" y="295" text-anchor="end" class="t-mono" font-size="11" font-weight="600" fill="{t["secondary"]}">{total_coded} / {gcfg["total_repos"]} REPOS</text>'
+        f'  <rect x="806" y="280" width="346" height="30" rx="8" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1"/>\n'
+        f'  <line x1="818" y1="280.8" x2="1140" y2="280.8" stroke="url(#gstats-spec-top)" stroke-width="0.8"/>\n'
+        f'  <text x="820" y="299" class="t-mono c-dim" font-size="10">{esc(gcfg["coverage_label"])}</text>\n'
+        f'  <text x="1140" y="299" text-anchor="end" class="t-mono" font-size="11" font-weight="600" fill="{t["secondary"]}">{total_coded} / {gcfg["total_repos"]} REPOS</text>'
     )
 
+    # Repo total boxes inside hanging ID card (3 tiles across 292px: x=58..350)
     repo_boxes_xml = []
     for i, rb in enumerate(gcfg["repo_totals"][:3]):
-        rx0 = 44 + i * 103
+        rx0 = 58 + i * 100
         col = rb["color"]
         repo_boxes_xml.append(
-            f'  <rect x="{rx0}" y="202" width="94" height="74" rx="10" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1"/>\n'
-            f'  <rect x="{rx0 + 12}" y="202" width="28" height="2.5" rx="1.25" fill="{esc(col)}"/>\n'
-            f'  <text x="{rx0 + 12}" y="224" class="t-mono c-dim" font-size="9">{esc(rb["label"])}</text>\n'
-            f'  <text x="{rx0 + 12}" y="257" class="t-display" font-size="24" font-weight="700" fill="{esc(col)}">{esc(rb["value"])}</text>'
+            f'        <rect x="{rx0}" y="236" width="92" height="52" rx="9" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1"/>\n'
+            f'        <rect x="{rx0 + 10}" y="236" width="24" height="2" rx="1" fill="{esc(col)}"/>\n'
+            f'        <text x="{rx0 + 10}" y="253" class="t-mono c-dim" font-size="8.5" letter-spacing="0.4">{esc(rb["label"])}</text>\n'
+            f'        <text x="{rx0 + 10}" y="278" class="t-display" font-size="20" font-weight="700" fill="{esc(col)}">{esc(rb["value"])}</text>'
         )
 
+    # KPI Bento strip on right card (5 boxes across 724px)
     kpis = gcfg["kpis"][:5]
-    kpi_gap = 11
-    kpi_w = (744 - kpi_gap * (max(1, len(kpis)) - 1)) // max(1, len(kpis))
+    kpi_gap = 10
+    kpi_w = (724 - kpi_gap * (max(1, len(kpis)) - 1)) // max(1, len(kpis))
     kpi_xml = []
     for i, kp in enumerate(kpis):
-        kx = 410 + i * (kpi_w + kpi_gap)
+        kx = 428 + i * (kpi_w + kpi_gap)
         col = kp["color"]
         kpi_xml.append(
-            f'  <rect x="{kx}" y="72" width="{kpi_w}" height="70" rx="10" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1.1"/>\n'
-            f'  <line x1="{kx + 10}" y1="72.8" x2="{kx + kpi_w - 10}" y2="72.8" stroke="url(#gstats-spec-top)" stroke-width="0.9"/>\n'
-            f'  <rect x="{kx + 14}" y="72" width="32" height="2.5" rx="1.25" fill="{esc(col)}"/>\n'
-            f'  <text x="{kx + 14}" y="95" class="t-mono c-dim" font-size="9.5" letter-spacing="0.6">{esc(kp["label"])}</text>\n'
-            f'  <text x="{kx + 14}" y="126" class="t-display" font-size="24" font-weight="700" fill="{esc(col)}">{esc(kp["value"])}</text>'
+            f'  <rect x="{kx}" y="74" width="{kpi_w}" height="70" rx="10" fill="url(#gstats-glass-alt)" stroke="{t["border"]}" stroke-width="1.1"/>\n'
+            f'  <line x1="{kx + 10}" y1="74.8" x2="{kx + kpi_w - 10}" y2="74.8" stroke="url(#gstats-spec-top)" stroke-width="0.9"/>\n'
+            f'  <rect x="{kx + 14}" y="74" width="32" height="2.5" rx="1.25" fill="{esc(col)}"/>\n'
+            f'  <text x="{kx + 14}" y="97" class="t-mono c-dim" font-size="9.5" letter-spacing="0.6">{esc(kp["label"])}</text>\n'
+            f'  <text x="{kx + 14}" y="128" class="t-display" font-size="24" font-weight="700" fill="{esc(col)}">{esc(kp["value"])}</text>'
         )
 
-    snap_w = max(120, round(estimate_text_px(prof["snapshot_label"], 9.5, mono=True) + 22))
+    snap_w = max(124, round(estimate_text_px(prof["snapshot_label"], 9.0, mono=True) + 20))
     status_w = max(106, round(estimate_text_px(gcfg["status_badge"], 10.0, mono=True) + 38))
-    status_x = 1154 - status_w
+    status_x = 1152 - status_w
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none" role="img" aria-label="{esc(gcfg['aria_label'])}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="372" viewBox="0 0 1200 372" fill="none" role="img" aria-label="{esc(gcfg['aria_label'])}">
   <defs>
-{base_defs("gstats", 1200, 360, fonts_css, extra_css)}
+{base_defs("gstats", 1200, 372, fonts_css, extra_css)}
     <linearGradient id="gstats-bar-gloss" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
       <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0.20"/>
     </linearGradient>
+    <linearGradient id="gstats-clasp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="35%" stop-color="#CBD5E1"/>
+      <stop offset="70%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
     <linearGradient id="gstats-foil" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="44%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="{t['secondary']}" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="{t['secondary']}" stop-opacity="0.16"/>
       <stop offset="56%" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
+    <clipPath id="gs-badge-clip">
+      <rect x="40" y="60" width="328" height="290" rx="16"/>
+    </clipPath>
     <clipPath id="gs-photo-clip">
-      <rect x="44" y="44" width="96" height="118" rx="10"/>
+      <rect x="58" y="92" width="102" height="122" rx="10"/>
     </clipPath>
     <clipPath id="gs-stack-clip">
-      <rect x="410" y="182" width="744" height="14" rx="7"/>
+      <rect x="428" y="184" width="724" height="14" rx="7"/>
     </clipPath>
   </defs>
 
-{shell_background("gstats", 1200, 360)}
+{shell_background("gstats", 1200, 372)}
 
-  <!-- Left Panel: Developer Profile & Repository Totals -->
-  <rect x="24" y="24" width="340" height="312" rx="14" fill="url(#gstats-glass)" stroke="url(#gstats-card-stroke)" stroke-width="1.3"/>
-  <line x1="40" y1="24.8" x2="348" y2="24.8" stroke="url(#gstats-spec-top)" stroke-width="1"/>
+  <!-- Left Panel: Hanging Lanyard Pendulum Developer ID Badge -->
+  <g class="gs-drop">
+    <g class="gs-settle">
+      <g class="gs-swing">
+        <!-- Lanyard Strap & Metallic Swivel Clasp -->
+        <rect x="184" y="0" width="40" height="34" fill="#132038"/>
+        <rect x="188" y="0" width="4" height="34" fill="{t['primary']}"/>
+        <rect x="216" y="0" width="4" height="34" fill="{t['crimson']}"/>
+        <line x1="204" y1="2" x2="204" y2="30" stroke="{t['border']}" stroke-dasharray="2 2" stroke-width="1"/>
+        <rect x="176" y="30" width="56" height="16" rx="5" fill="url(#gstats-clasp)" stroke="#94A3B8" stroke-width="1.1"/>
+        <rect x="192" y="44" width="24" height="16" rx="4" fill="#334155" stroke="#94A3B8" stroke-width="1"/>
 
-  <rect x="44" y="44" width="96" height="118" rx="10" fill="{t['bg']}" stroke="url(#gstats-card-stroke)" stroke-width="1.2"/>
-  <g clip-path="url(#gs-photo-clip)">
-    <image href="{photo_uri}" x="44" y="46" width="96" height="116" preserveAspectRatio="xMidYMin slice"/>
-    <polygon class="gs-glare" points="44,44 74,44 44,162 14,162" fill="url(#gstats-foil)"/>
-  </g>
+        <!-- Badge Card Body -->
+        <rect x="40" y="60" width="328" height="290" rx="16" fill="url(#gstats-glass)" stroke="url(#gstats-card-stroke)" stroke-width="1.5"/>
+        <line x1="56" y1="60.8" x2="352" y2="60.8" stroke="url(#gstats-spec-top)" stroke-width="1"/>
+        <rect x="180" y="71" width="48" height="8" rx="4" fill="{t['bg']}" stroke="{t['border']}" stroke-width="1"/>
 
-  <text x="156" y="60" class="t-mono" font-size="10" font-weight="600" fill="{t['secondary']}" letter-spacing="0.9">{esc(prof['eyebrow'])}</text>
-  <text x="156" y="88" class="t-display" font-size="20" font-weight="700" fill="url(#gstats-title-grad)">{esc(prof['name'])}</text>
-  <text x="156" y="108" class="t-mono" font-size="11.5" fill="{t['crimson_soft']}">{esc(prof['handle'])}</text>
-  <text x="156" y="128" class="t-body c-muted" font-size="11.5">{esc(prof['location'])}</text>
-  <rect x="156" y="140" width="{snap_w}" height="22" rx="6" fill="{t['bg']}" stroke="{t['border']}" stroke-width="1"/>
-  <text x="{156 + snap_w // 2}" y="155" text-anchor="middle" class="t-mono c-dim" font-size="9.5">{esc(prof['snapshot_label'])}</text>
+        <!-- Framed Portrait -->
+        <rect x="58" y="92" width="102" height="122" rx="10" fill="{t['bg']}" stroke="url(#gstats-card-stroke)" stroke-width="1.2"/>
+        <g clip-path="url(#gs-photo-clip)">
+          <image href="{photo_uri}" x="58" y="94" width="102" height="120" preserveAspectRatio="xMidYMin slice"/>
+        </g>
 
-  <line x1="44" y1="184" x2="344" y2="184" stroke="url(#gstats-hairline)" stroke-width="1"/>
+        <!-- EMV Chip & Header Metadata -->
+        <rect x="174" y="92" width="32" height="22" rx="5" fill="#D4AF37" fill-opacity="0.22" stroke="#EAB308" stroke-width="1"/>
+        <path d="M174 103H206M190 92V114" stroke="#EAB308" stroke-opacity="0.7" stroke-width="0.9"/>
+        <text x="215" y="106" class="t-mono" font-size="9.5" font-weight="600" fill="{t['secondary']}" letter-spacing="0.6">{esc(prof['eyebrow'])}</text>
+
+        <text x="174" y="137" class="t-display" font-size="19.5" font-weight="700" fill="url(#gstats-title-grad)">{esc(prof['name'])}</text>
+        <text x="174" y="156" class="t-mono" font-size="11" fill="{t['crimson_soft']}">{esc(prof['handle'])}</text>
+        <text x="174" y="174" class="t-body c-muted" font-size="11">{esc(prof['location'])}</text>
+        <rect x="174" y="186" width="{snap_w}" height="22" rx="6" fill="{t['bg']}" stroke="{t['border']}" stroke-width="1"/>
+        <text x="{174 + snap_w // 2}" y="200.5" text-anchor="middle" class="t-mono c-dim" font-size="9">{esc(prof['snapshot_label'])}</text>
+
+        <line x1="58" y1="225" x2="350" y2="225" stroke="url(#gstats-hairline)" stroke-width="1"/>
 
 {chr(10).join(repo_boxes_xml)}
 
-  <text x="44" y="311" class="t-mono c-dim" font-size="10.5">{esc(prof['cohort_note'])}</text>
+        <text x="58" y="305" class="t-mono c-dim" font-size="9">{esc(prof['cohort_note'])}</text>
+        {"".join(barcode_rects)}
+        <text x="350" y="328" text-anchor="end" class="t-mono c-dim" font-size="10">B127-ALOK</text>
+
+        <!-- Foil Light Sweep Across Swinging ID Card -->
+        <g clip-path="url(#gs-badge-clip)">
+          <polygon class="gs-glare" points="40,60 120,60 40,350 -40,350" fill="url(#gstats-foil)"/>
+        </g>
+      </g>
+    </g>
+  </g>
 
   <!-- Right Panel: Telemetry Matrix & Language Proportions -->
-  <rect x="384" y="24" width="792" height="312" rx="14" fill="url(#gstats-glass)" stroke="{t['border']}" stroke-width="1.2"/>
-  <line x1="400" y1="24.8" x2="1160" y2="24.8" stroke="url(#gstats-spec-top)" stroke-width="1"/>
+  <rect x="404" y="24" width="772" height="324" rx="14" fill="url(#gstats-glass)" stroke="{t['border']}" stroke-width="1.2"/>
+  <line x1="420" y1="24.8" x2="1160" y2="24.8" stroke="url(#gstats-spec-top)" stroke-width="1"/>
 
-  <text x="410" y="52" class="t-mono" font-size="11.5" font-weight="600" fill="{t['secondary']}" letter-spacing="1.1">{esc(gcfg['right_header'])}</text>
-  <rect x="{status_x}" y="35" width="{status_w}" height="24" rx="7" fill="{t['bg']}" stroke="{t['border']}" stroke-width="1"/>
-  <circle class="beacon-halo" cx="{status_x + 14}" cy="47" r="3.5" fill="{t['green']}" style="transform-origin:{status_x + 14}px 47px"/>
-  <circle class="beacon-dot" cx="{status_x + 14}" cy="47" r="3.5" fill="{t['green']}"/>
-  <text x="{status_x + 24}" y="51" class="t-mono" font-size="10" font-weight="600" fill="{t['green']}">{esc(gcfg['status_badge'])}</text>
+  <text x="428" y="54" class="t-mono" font-size="11.5" font-weight="600" fill="{t['secondary']}" letter-spacing="1.1">{esc(gcfg['right_header'])}</text>
+  <rect x="{status_x}" y="37" width="{status_w}" height="24" rx="7" fill="{t['bg']}" stroke="{t['border']}" stroke-width="1"/>
+  <circle class="beacon-halo" cx="{status_x + 14}" cy="49" r="3.5" fill="{t['green']}" style="transform-origin:{status_x + 14}px 49px"/>
+  <circle class="beacon-dot" cx="{status_x + 14}" cy="49" r="3.5" fill="{t['green']}"/>
+  <text x="{status_x + 24}" y="53" class="t-mono" font-size="10" font-weight="600" fill="{t['green']}">{esc(gcfg['status_badge'])}</text>
 
 {chr(10).join(kpi_xml)}
 
-  <text x="410" y="170" class="t-mono c-muted" font-size="10.5" font-weight="600" letter-spacing="0.9">PRIMARY LANGUAGE DISTRIBUTION ({total_coded} CODED REPOS)</text>
-  <rect x="410" y="182" width="744" height="14" rx="7" fill="{t['bg']}" stroke="{t['border']}" stroke-width="0.8"/>
+  <text x="428" y="172" class="t-mono c-muted" font-size="10.5" font-weight="600" letter-spacing="0.9">PRIMARY LANGUAGE DISTRIBUTION ({total_coded} CODED REPOS)</text>
+  <rect x="428" y="184" width="724" height="14" rx="7" fill="{t['bg']}" stroke="{t['border']}" stroke-width="0.8"/>
   <g clip-path="url(#gs-stack-clip)" class="gs-bar">
     {"".join(stacked_rects)}
-    <rect x="410" y="182" width="744" height="14" fill="url(#gstats-bar-gloss)"/>
+    <rect x="428" y="184" width="724" height="14" fill="url(#gstats-bar-gloss)"/>
   </g>
 
 {chr(10).join(lang_cards)}
@@ -850,6 +927,9 @@ def build_connect(fonts_css: str) -> str:
       .conn-w3 { animation: conn-wave 2.4s 0.7s ease-in-out infinite; }
       .conn-down { animation: conn-drop 2s ease-in-out infinite; }"""
 
+    badge_txt = ccfg["character_badge"]
+    badge_w = min(224, max(132, round(estimate_text_px(badge_txt, 10.0, mono=True, letter_spacing=0.8) + 28)))
+    badge_x = 148 - badge_w // 2
     status_w = max(160, round(estimate_text_px(ccfg["status_badge"], 10.0, mono=True, letter_spacing=0.8) + 46))
     p1 = ccfg["pitch_lines"][0] if len(ccfg["pitch_lines"]) > 0 else ""
     p2 = ccfg["pitch_lines"][1] if len(ccfg["pitch_lines"]) > 1 else ""
@@ -882,8 +962,8 @@ def build_connect(fonts_css: str) -> str:
     <image href="{char_uri}" x="38" y="28" width="220" height="214" preserveAspectRatio="xMidYMid meet"/>
     <rect x="24" y="164" width="248" height="84" fill="url(#conn-floor-fade)"/>
   </g>
-  <rect x="36" y="214" width="132" height="22" rx="6" fill="{t['bg']}" fill-opacity="0.92" stroke="url(#conn-pill-stroke)" stroke-width="1"/>
-  <text x="102" y="229" text-anchor="middle" class="t-mono" font-size="10" font-weight="600" fill="{t['secondary']}" letter-spacing="0.8">{esc(ccfg['character_badge'])}</text>
+  <rect x="{badge_x}" y="214" width="{badge_w}" height="22" rx="6" fill="{t['bg']}" fill-opacity="0.92" stroke="url(#conn-pill-stroke)" stroke-width="1"/>
+  <text x="148" y="229" text-anchor="middle" class="t-mono" font-size="10" font-weight="600" fill="{t['secondary']}" letter-spacing="0.8">{esc(badge_txt)}</text>
 
   <!-- Pointing Directional Signal Chevrons -->
   <g transform="translate(286, 116)">
@@ -922,11 +1002,11 @@ def build_connect(fonts_css: str) -> str:
 # CLI ENTRYPOINT & VALIDATION
 # ==============================================================================
 BUILDERS = {
-    "hero": ("hero.svg", lambda fcss, raw: build_hero(fcss, use_raw=raw)),
-    "about": ("about.svg", lambda fcss, raw: build_about(fcss)),
-    "technology": ("technology.svg", lambda fcss, raw: build_technology(fcss)),
-    "github-stats": ("github-stats.svg", lambda fcss, raw: build_github_stats(fcss, use_raw=raw)),
-    "connect": ("connect.svg", lambda fcss, raw: build_connect(fcss)),
+    "hero": ("hero.svg", lambda fcss, raw, _stats: build_hero(fcss, use_raw=raw)),
+    "about": ("about.svg", lambda fcss, raw, _stats: build_about(fcss)),
+    "technology": ("technology.svg", lambda fcss, raw, _stats: build_technology(fcss)),
+    "github-stats": ("github-stats.svg", lambda fcss, raw, stats: build_github_stats(fcss, use_raw=raw, stats_override=stats)),
+    "connect": ("connect.svg", lambda fcss, raw, _stats: build_connect(fcss)),
 }
 
 
@@ -956,6 +1036,16 @@ def main() -> int:
         help="Embed full-resolution assets/id.png instead of compressed thumbnails.",
     )
     parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Skip live GitHub API fetching and use static values in config.py.",
+    )
+    parser.add_argument(
+        "--username",
+        default=None,
+        help="Override GitHub username when fetching live telemetry.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Render and XML-validate SVGs in memory without writing files.",
@@ -969,12 +1059,24 @@ def main() -> int:
     targets = args.only or list(BUILDERS.keys())
     fonts_css = load_fonts_css()
 
+    live_stats = None
+    if "github-stats" in targets and not args.offline:
+        live_stats, synced = fetch_live_github_stats(cfg.GITHUB_STATS, args.username)
+        if synced:
+            print(
+                f"Synced live GitHub metrics for {live_stats['profile']['handle']}: "
+                f"{live_stats['total_repos']} repos, {live_stats['kpis'][0]['value']} contribs, "
+                f"{live_stats['kpis'][1]['value']} commits, {live_stats['kpis'][3]['value']} streak"
+            )
+        else:
+            print("Using static GITHUB_STATS values from config.py (live fetch unavailable).")
+
     if not args.dry_run:
         out_dir.mkdir(parents=True, exist_ok=True)
 
     for key in targets:
         filename, builder = BUILDERS[key]
-        svg_text = builder(fonts_css, args.raw_photos)
+        svg_text = builder(fonts_css, args.raw_photos, live_stats)
         validate_svg(svg_text, filename)
         if args.dry_run:
             print(f"[dry-run] {filename}: {len(svg_text):,} bytes (XML OK)")

@@ -1,0 +1,40 @@
+name: Update Live GitHub Stats SVG
+
+on:
+  schedule:
+    # Refresh live repository, contribution, streak, and language metrics every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    name: Sync Live GitHub Stats SVG
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch live stats and regenerate github-stats.svg
+        env:
+          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+        run: python scripts/generate_svgs.py --only github-stats
+
+      - name: Commit updated github-stats.svg if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/images/github-stats.svg
+          git diff --cached --quiet || (git commit -m "chore(stats): update live github-stats.svg" && git push)

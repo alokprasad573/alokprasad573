@@ -16,11 +16,21 @@ Edit any text, colors, stats, roles, or tech lists in [`config.py`](./config.py)
 python scripts/generate_svgs.py
 ```
 
+When generating `github-stats.svg`, [`github_live.py`](./github_live.py) automatically fetches live GitHub telemetry (repositories, original repos, stars, PRs, 1-year commits, contributions, streaks, and primary languages) and falls back cleanly to [`config.py`](./config.py) if offline or rate-limited.
+
+A GitHub Actions workflow ([`update-github-stats.yml`](../.github/workflows/update-github-stats.yml)) also runs this sync every 6 hours automatically using `${{ secrets.GITHUB_TOKEN }}` and commits updates to `assets/images/github-stats.svg`.
+
 ## Useful Flags
 
 ```bash
-# Regenerate only specific SVGs
-python scripts/generate_svgs.py --only hero technology
+# Regenerate only specific SVGs (live stats enabled by default for github-stats)
+python scripts/generate_svgs.py --only github-stats
+
+# Skip network fetch and render static fallback metrics from config.py
+python scripts/generate_svgs.py --only github-stats --offline
+
+# Override GitHub handle for live fetch
+python scripts/generate_svgs.py --only github-stats --username alokprasad573
 
 # Embed full-resolution assets/id.png directly (useful if you replace id.png)
 python scripts/generate_svgs.py --raw-photos
