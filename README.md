@@ -7,7 +7,7 @@
   <a href="https://www.linkedin.com/in/alokprasad573/"><img src="./assets/icons/buttons/btn-linkedin.svg?v=1" alt="Connect with Alok Prasad on LinkedIn" height="36" /></a>&nbsp;&nbsp;
   <a href="https://www.instagram.com/alokprasad573"><img src="./assets/icons/buttons/btn-instagram.svg?v=1" alt="Follow @alokprasad573 on Instagram" height="36" /></a>&nbsp;&nbsp;
   <a href="mailto:alokprasad573@gmail.com"><img src="./assets/icons/buttons/btn-email.svg?v=1" alt="Send email to alokprasad573@gmail.com" height="36" /></a>&nbsp;&nbsp;
-  <a href="https://b-127-archive.vercel.app/"><img src="./assets/icons/buttons/btn-portfolio.svg?v=1" alt="Visit B-127 Archive interactive portfolio" height="36" /></a>
+  <a href="https://alok-prasad-portfolio.vercel.app/"><img src="./assets/icons/buttons/btn-portfolio.svg?v=1" alt="Visit Doomsday interactive portfolio" height="36" /></a>
 </p>
 
 ---
@@ -97,5 +97,13 @@ Currently deepening production skills in **AWS infrastructure, distributed queue
 </div>
 
 <p align="center">
-  <a href="https://github.com/alokprasad573"><img src="./assets/icons/buttons/btn-github.svg?v=1" alt="Follow @alokprasad573 on GitHub" height="36" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/alokprasad573/"><img src="./assets/icons/buttons/btn-linkedin.svg?v=1" alt="Connect with Alok Prasad on LinkedIn" height="36" /></a>&nbsp;&nbsp;<a href="https://www.instagram.com/alokprasad573"><img src="./assets/icons/buttons/btn-instagram.svg?v=1" alt="Follow @alokprasad573 on Instagram" height="36" /></a>&nbsp;&nbsp;<a href="mailto:alokprasad573@gmail.com"><img src="./assets/icons/buttons/btn-email.svg?v=1" alt="Send email to alokprasad573@gmail.com" height="36" /></a>&nbsp;&nbsp;<a href="https://b-127-archive.vercel.app/"><img src="./assets/icons/buttons/btn-portfolio.svg?v=1" alt="Visit B-127 Archive interactive portfolio" height="36" /></a>
+  <a href="https://github.com/alokprasad573"><img src="./assets/icons/buttons/btn-github.svg?v=1" alt="Follow @alokprasad573 on GitHub" height="36" /></a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/alokprasad573/"><img src="./assets/icons/buttons/btn-linkedin.svg?v=1" alt="Connect with Alok Prasad on LinkedIn" height="36" /></a>
+  &nbsp;&nbsp;
+  <a href="https://www.instagram.com/alokprasad573"><img src="./assets/icons/buttons/btn-instagram.svg?v=1" alt="Follow @alokprasad573 on Instagram" height="36" /></a>
+  &nbsp;&nbsp;
+  <a href="mailto:alokprasad573@gmail.com"><img src="./assets/icons/buttons/btn-email.svg?v=1" alt="Send email to alokprasad573@gmail.com" height="36" /></a>
+  &nbsp;&nbsp;
+  <a href="https://alok-prasad-portfolio.vercel.app/"><img src="./assets/icons/buttons/btn-portfolio.svg?v=1" alt="Visit Doomsday interactive portfolio" height="36" /></a>
 </p>
